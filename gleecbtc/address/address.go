@@ -57,8 +57,8 @@ var (
 )
 
 const (
-	NetIDMainnetP2S2  = 0x32
-	NetIDTestnetP2SH2 = 0x3A
+	NetIDMainnetP2S2  = 0x23
+	NetIDTestnetP2SH2 = 0x26
 )
 
 func init() {
@@ -225,7 +225,7 @@ func DecodeAddress(addr string, defaultNet *chaincfg.Params) (Address, error) {
 // an address string into a specific address type.
 func IsBech32SegwitPrefix(prefix string) bool {
 	prefix = strings.ToLower(prefix)
-	if prefix == "ltc1" || prefix == "tltc1" {
+	if prefix == "fg1" || prefix == "tfg1" {
 		return true
 	}
 	return false
